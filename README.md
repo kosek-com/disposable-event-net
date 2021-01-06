@@ -39,6 +39,8 @@ and each time you subsribe an event to it you will get `IDisposable` token.
 
 Disposing that token will automatically unsuscribe you from the event.
 
+See [the example](example/Program.cs)
+
 ## Features
 
  - The compiler will be peaky about not releasing `IDisposable` token. It is much
@@ -48,5 +50,6 @@ Disposing that token will automatically unsuscribe you from the event.
  - If you have several events to allocate at once you can use provided `DisposableCollection`.
    With single `Dispose()` call you will dispose all `IDisposable` members of it
 
+## Drawbacks
 
-
+ - Not (yet) thread safe (PRs are welcome!)
