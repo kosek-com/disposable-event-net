@@ -3,14 +3,14 @@ using Kosek.DisposableEvent;
 
 namespace example
 {
-    public class Program
-    {
+	public class Program
+	{
 		public static readonly DisposableEvent event1 = new DisposableEvent();
 		public static readonly DisposableEvent<string> event2 = new DisposableEvent<string>();
 		
-        static void Main(string[] args)
-        {
-            using(var token = event1.Register(Event1))
+		static void Main(string[] args)
+		{
+			using(var token = event1.Register(Event1))
 			{
 				event1.Invoke(); // Outputs "Received event1!"
 			}
@@ -33,11 +33,11 @@ namespace example
 			tokens.Dispose();
 			
 			event2.Invoke("Milk?"); // Outputs nothing
-        }
+		}
 		
 		private static void Event1()
 		{
 			Console.WriteLine("Received event1!");
 		}
-    }
+	}
 }
