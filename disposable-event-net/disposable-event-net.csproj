@@ -3,6 +3,24 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Kosek.DisposableEvent</RootNamespace>
+	<PackageId>Kosek.DisposableEvent</PackageId>
+	<Title>Disposable Event for .NET</Title>
+	<Version>1.1.0</Version>
+	<Authors>Piotr Kosek</Authors>
+	<Company>Kosek.com</Company>
+	<Description>A smart and simple way to work with limited-lifetime events in .NET
+	This package introduce the concept of Disposable events - when you subscribe to such event you will obtain IDisposable token, and when you call Dispose on it, the event subscription will be automatically removed. This will work regardless of action used to subscribe (such as lambdas, or other hard-to-unregister types)</Description>
+	<Copyright>Copyright © 2020-2021 Kosek.com</Copyright>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<PackageIcon>Icon.png</PackageIcon>
+	<PackageReleaseNotes>Added missing files</PackageReleaseNotes>
+	<PackageTags>event events utility diposable dispose raii</PackageTags>
+	<RepositoryUrl>https://github.com/kosek-com/disposable-event-net.git</RepositoryUrl>
+	<ProjectUrl>https://github.com/kosek-com/disposable-event-net</ProjectUrl>
+	
   </PropertyGroup>
 
+	<ItemGroup>
+	  <None Include="Icon.png" Pack="true" PackagePath=""/>
+	</ItemGroup>
 </Project>
