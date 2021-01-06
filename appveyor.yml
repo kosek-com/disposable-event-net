@@ -1,3 +1,5 @@
 before_build:
   - nuget restore disposable-event-net/disposable-event-net.csproj
   - nuget restore example/example.csproj
+build:
+  project: example\example.csproj
